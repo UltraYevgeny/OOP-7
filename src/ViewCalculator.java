@@ -13,6 +13,7 @@ public class ViewCalculator {
             int realFirstArg = promptInt("Введите вещественную часть первого аргумента: ");
             int imagFirstArg = promptInt("Введите мнимую часть первого аргумента: ");
 
+            
             calculator.sum(realFirstArg, imagFirstArg);
             //iCalculable calculator = calculableFactory.create(primaryArg);
 
@@ -37,8 +38,6 @@ public class ViewCalculator {
                     continue;
                 }
                 if (cmd.equals("=")) {
-                    //ComplexNumber result = calculator.getResult();
-                    //System.out.printf("Результат %d\n", result);
                     System.out.printf("Результат:\nвещественная часть: %d и мнимая часть: %di\n"
                                 , calculator.getResult().getRealArg()
                                 , calculator.getResult().getImagArg());
