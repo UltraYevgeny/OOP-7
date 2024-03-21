@@ -1,7 +1,7 @@
 public class Decorator implements iCalculable {
     private CalculatorComplexNumber a;
     private Logger b;
-    
+
     public Decorator(CalculatorComplexNumber a, Logger b) {
         this.a = a;
         this.b = b;
@@ -9,40 +9,35 @@ public class Decorator implements iCalculable {
 
     @Override
     public void sum(int argReal, int argImag) {
-        //int firstArg = a.getResult();
-        //b.log(String.format("Первое значение калькулятора %d. Начало вызова метода sum с параметром %d", firstArg, argReal, argImag));
+        b.log(String.format("запуск опирации: сумма Комплексных чисел"));
         a.sum(argReal, argImag);
-        b.log(String.format("Вызова метода sum произошел"));
     }
 
     @Override
     public void multi(int argReal, int argImag) {
-        //int firstArg = a.getResult();
-        //b.log(String.format("Первое значение калькулятора %d. Начало вызова метода multi с параметром %d", firstArg, argReal, argImag));
+        b.log(String.format("запуск опирации: умножение Комплексных чисел"));
         a.multi(argReal, argImag);
-        b.log(String.format("Вызова метода multi произошел"));
     }
 
     @Override
     public void divide(int argReal, int argImag) {
-        //int firstArg = a.getResult();
-        //b.log(String.format("Первое значение калькулятора %d. Начало вызова метода multi с параметром %d", firstArg, argReal, argImag));
+        b.log(String.format("запуск опирации: деление Комплексных чисел"));
         a.divide(argReal, argImag);
-        b.log(String.format("Вызова метода divide произошел"));
     }
 
     @Override
     public ComplexNumber getResult() {
-        b.log(String.format("Получение результата!"));
         return a.getResult();
     }
     @Override
     public void firstPair(int argReal, int argImag) {
         a.firstPair(argReal, argImag);
+        b.log(String.format("Первая пара чисел внесена в память"));
     }
     
     @Override
     public void zero() {
+        b.log(String.format("Обнуление всех значений"));
         a.zero();
     }
     @Override

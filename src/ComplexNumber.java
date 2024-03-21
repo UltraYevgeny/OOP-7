@@ -1,3 +1,7 @@
+
+/**
+ * @apiNote экземпляры этого класса содержат пару чисел - вещественное и мнимое
+ */
 public class ComplexNumber{
     private int realArg;
     private int imagArg;

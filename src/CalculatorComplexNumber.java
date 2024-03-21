@@ -1,8 +1,10 @@
 public final class CalculatorComplexNumber implements iCalculable {
+    // первая пара введенных пользователем чисел
     private ComplexNumber complexNumberFirst = new ComplexNumber();
+    // вторая пара введенных пользователем чисел
     private ComplexNumber complexNumberSecond = new ComplexNumber();
+    // пара чисел полученных в хде матиматической операции
     private ComplexNumber complexNumberResult = new ComplexNumber();
-    
     
     public CalculatorComplexNumber(){
     }

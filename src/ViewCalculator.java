@@ -39,7 +39,7 @@ public class ViewCalculator {
                 }
                 if (cmd.equals("=")) {
                     System.out.println("----------------");
-                    System.out.println("Вводные данные: ");
+                    System.out.println("(Справка) вводные данные: ");
                     System.out.println(calculator);
                     System.out.println("----------------");
                     System.out.printf("Результат:\nвещественная часть: %d и мнимая часть: %di\n"
