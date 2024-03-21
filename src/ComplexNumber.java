@@ -2,6 +2,11 @@ public class ComplexNumber{
     private int realArg;
     private int imagArg;
 
+    public void zero(){
+        realArg = 0;
+        imagArg = 0;
+    }
+
     public int getRealArg() {
         return realArg;
     }

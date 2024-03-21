@@ -13,12 +13,12 @@ public class ViewCalculator {
             int realFirstArg = promptInt("Введите вещественную часть первого аргумента: ");
             int imagFirstArg = promptInt("Введите мнимую часть первого аргумента: ");
 
-            
-            calculator.sum(realFirstArg, imagFirstArg);
+            calculator.firstPair(realFirstArg, imagFirstArg);
             //iCalculable calculator = calculableFactory.create(primaryArg);
 
             while (true) {
                 String cmd = prompt("Введите команду (+, *, /, =) :  ");
+                
                 if (cmd.equals("+")) {
                     int argReal = promptInt("Введите второй вещественный аргумент: ");
                     int argImag = promptInt("Введите второй мнимый аргумент: ");
@@ -38,6 +38,10 @@ public class ViewCalculator {
                     continue;
                 }
                 if (cmd.equals("=")) {
+                    System.out.println("----------------");
+                    System.out.println("Вводные данные: ");
+                    System.out.println(calculator);
+                    System.out.println("----------------");
                     System.out.printf("Результат:\nвещественная часть: %d и мнимая часть: %di\n"
                                 , calculator.getResult().getRealArg()
                                 , calculator.getResult().getImagArg());
@@ -46,8 +50,7 @@ public class ViewCalculator {
             }
             String cmd = prompt("Еще посчитать (Y/N)?");
             if (cmd.equals("Y")) {
-                calculator.getResult().setRealArg(0);
-                calculator.getResult().setImagArg(0);
+                calculator.zero();
                 continue;
             }
             break;
