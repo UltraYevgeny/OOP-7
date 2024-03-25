@@ -1,5 +1,11 @@
 import java.util.Scanner;
 
+
+/**
+ * @apiNote Класс осуществляющий работу с пользователем
+ * @apiNote ввод/вывод иформации, пользовательское меню
+ * @apiNote Services класс
+ */
 public class ViewCalculator {
 
     private iCalculable calculator;
@@ -9,6 +15,7 @@ public class ViewCalculator {
     }
 
     public void run() {
+        // ввод первой пары чисел для расчета
         while (true) {
             int realFirstArg = promptInt("Введите вещественную часть первого аргумента: ");
             int imagFirstArg = promptInt("Введите мнимую часть первого аргумента: ");
@@ -16,6 +23,8 @@ public class ViewCalculator {
             calculator.firstPair(realFirstArg, imagFirstArg);
             //iCalculable calculator = calculableFactory.create(primaryArg);
 
+            // меню выбора операции с числами и ввод второй пары чисел для расчета
+            // также вывод информации о заданных числах и результат расчета
             while (true) {
                 String cmd = prompt("Введите команду (+, *, /, =) :  ");
                 
@@ -50,7 +59,6 @@ public class ViewCalculator {
             }
             String cmd = prompt("Еще посчитать (Y/N)?");
             if (cmd.equals("Y")) {
-                calculator.zero();
                 continue;
             }
             break;

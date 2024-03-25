@@ -1,3 +1,7 @@
+
+/**
+ * @apiNote Services класс
+ */
 public class Logger {
     public void log(String line)
     {

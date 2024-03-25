@@ -1,3 +1,9 @@
+
+/**
+ * @apiNote класс проводит матиматические расчеты с введенными числами
+ * @apiNote и выдет результат
+ * @apiNote Domain класс
+ */
 public final class CalculatorComplexNumber implements iCalculable {
     // первая пара введенных пользователем чисел
     private ComplexNumber complexNumberFirst = new ComplexNumber();
@@ -14,7 +20,6 @@ public final class CalculatorComplexNumber implements iCalculable {
         complexNumberFirst.setRealArg(argReal);
         complexNumberFirst.setImagArg(argImag);
     }
-
     private void secondPair(int argReal, int argImag){
         complexNumberSecond.setRealArg(argReal);
         complexNumberSecond.setImagArg(argImag);
@@ -30,6 +35,7 @@ public final class CalculatorComplexNumber implements iCalculable {
     @Override
     public void multi(int argReal, int argImag) {
         secondPair(argReal, argImag);
+        // a, b, c, d - введены для удобства записи математической формулы
         int a = complexNumberFirst.getRealArg(); int b = complexNumberFirst.getImagArg();
         int c = argReal; int d = argImag;
         complexNumberResult.setRealArg(a*c - b*d);
@@ -39,6 +45,7 @@ public final class CalculatorComplexNumber implements iCalculable {
     @Override
     public void divide(int argReal, int argImag) {
         secondPair(argReal, argImag);
+        // a, b, c, d - введены для удобства записи математической формулы
         int a = complexNumberFirst.getRealArg(); int b = complexNumberFirst.getImagArg();
         int c = argReal; int d = argImag;
         complexNumberResult.setRealArg((a*c + b*d)/(c*c + d*d));
@@ -58,10 +65,4 @@ public final class CalculatorComplexNumber implements iCalculable {
             + "\nвторое мнимое значение: " + complexNumberSecond.getImagArg();
     }
 
-    @Override
-    public void zero() {
-        complexNumberFirst.zero();
-        complexNumberSecond.zero();
-        complexNumberResult.zero();
-    }
 }

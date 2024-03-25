@@ -1,3 +1,10 @@
+
+
+/**
+ * @apiNote класс перенаправляет операции из ViewCalculator в CalculatorComplexNumber
+ * @apiNote и использует класс Logger для ведения логирования операций
+ * @apiNote Controllers класс
+ */
 public class Decorator implements iCalculable {
     private CalculatorComplexNumber a;
     private Logger b;
@@ -35,11 +42,6 @@ public class Decorator implements iCalculable {
         b.log(String.format("Первая пара чисел внесена в память"));
     }
     
-    @Override
-    public void zero() {
-        b.log(String.format("Обнуление всех значений"));
-        a.zero();
-    }
     @Override
     public String toString() {
         return a.toString();

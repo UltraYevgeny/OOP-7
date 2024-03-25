@@ -1,6 +1,7 @@
 
 /**
  * @apiNote экземпляры этого класса содержат пару чисел - вещественное и мнимое
+ * @apiNote Domain класс
  */
 public class ComplexNumber{
     private int realArg;
